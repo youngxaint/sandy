@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SNEAKSTYLE | Hoodies & Sneakers</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#f6f6f6;--tx:#222;--tx2:#767676;--line:#e8e8e8;--btn:#222;--btntx:#fff;--red:#e4143c;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--bg2:#222;--tx:#f2f2f2;--tx2:#a0a0a0;--line:#333;--btn:#f2f2f2;--btntx:#141414;--red:#ff4d6d;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141414;--bg2:#222;--tx:#f2f2f2;--tx2:#a0a0a0;--line:#333;--btn:#f2f2f2;--btntx:#141414;--red:#ff4d6d;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{background:var(--bg);color:var(--tx);font-family:'Inter',Arial,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.promo{background:#222;color:#fff;text-align:center;font-size:12px;padding:7px 8px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.row1{display:flex;align-items:center;gap:14px;padding:10px 3vw}
+.logo{font-weight:800;font-size:26px;letter-spacing:-.5px;font-style:italic}
+.search{flex:1;max-width:640px;margin:0 auto;display:flex;border:2px solid var(--tx);border-radius:99px;overflow:hidden;height:40px}
+.search input{flex:1;border:0;outline:0;background:none;padding:0 16px;font:inherit;color:var(--tx);min-width:0}
+.search button{background:var(--tx);color:var(--bg);padding:0 20px;font-weight:600}
+.ib{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:20px;position:relative;flex:none}
+.ib b{position:absolute;top:0;right:-2px;background:var(--red);color:#fff;font-size:10px;min-width:16px;height:16px;border-radius:8px;display:grid;place-items:center}
+.chips{display:flex;justify-content:center;gap:10px;padding:0 3vw 12px;overflow-x:auto}
+.chips a{flex:none;padding:8px 32px;border-radius:99px;background:var(--bg2);font-weight:600}
+.chips a.hot{background:var(--red);color:#fff}
+.banner{margin:12px 3vw 0;border-radius:6px;background:linear-gradient(100deg,#111 0,#2a0a12 55%,var(--red) 130%);color:#fff;padding:36px 4vw;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.banner h1{font-size:clamp(28px,5vw,52px);font-weight:800;line-height:1.05;font-style:italic}
+.banner p{opacity:.8;margin-top:6px}
+.cta{background:#fff;color:#111;padding:12px 28px;border-radius:99px;font-weight:700}
+section{padding:28px 3vw 8px}
+.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+h2{font-size:22px;font-weight:800;border-left:4px solid var(--red);padding-left:10px}
+.count{color:var(--tx2)}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px 8px}
+.img{position:relative;background:var(--bg2);aspect-ratio:3/4;overflow:hidden;border-radius:4px}
+.img img{width:100%;height:100%;object-fit:cover}
+.heart{position:absolute;right:8px;bottom:8px;width:32px;height:32px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-size:16px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.heart.on{color:var(--red)}
+.tag{position:absolute;left:0;top:8px;background:var(--tx);color:var(--bg);font-size:11px;font-weight:600;padding:2px 8px;border-radius:0 3px 3px 0}
+.nm{margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.9em}
+.pr{color:var(--red);font-weight:800;font-size:18px;margin:2px 0 8px}
+.buy{display:block;text-align:center;background:var(--btn);color:var(--btntx);border-radius:4px;padding:9px;font-weight:600;font-size:13px}
+.buy:hover{opacity:.85}
+.more{display:block;margin:24px auto 0;border:1px solid var(--tx);border-radius:99px;padding:10px 40px;font-weight:600}
+.more:hover{background:var(--tx);color:var(--bg)}
+.none{grid-column:1/-1;color:var(--tx2);padding:28px 0}
+footer{margin-top:48px;background:#222;color:#fff;padding:32px 3vw;font-size:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer p{opacity:.7;max-width:520px}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+@media(max-width:1200px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr)}.logo{font-size:22px}.search button{padding:0 14px}.pr{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="promo">Free shipping on eligible Amazon orders with Prime</div>
+<div class="top">
+  <div class="row1">
+    <a class="logo" href="#hoodies">SNEAKSTYLE</a>
+    <form class="search" id="sf"><input id="q" type="search" placeholder="Search hoodies, sneakers, brands" aria-label="Search products"><button type="submit">Search</button></form>
+    <button class="ib" id="wl" aria-label="Wishlist">♡<b id="wc">0</b></button>
+    <button class="ib" id="th" aria-label="Toggle theme">◐</button>
+  </div>
+  <div class="chips"><a class="hot" href="#hoodies">Hoodies</a><a href="#shoes">Shoes</a></div>
+</div>
+<div class="banner">
+  <div><h1>Hoodie season.<br>Fresh kicks.</h1><p>Streetwear and sneakers, one tap from Amazon.</p></div>
+  <a class="cta" href="#hoodies">Shop now</a>
+</div>
+<section id="hoodies"><div class="head"><h2>Hoodies</h2><span class="count" id="hc"></span></div><div class="grid" id="hg"></div><button class="more" id="hm">View more</button></section>
+<section id="shoes"><div class="head"><h2>Shoes</h2><span class="count" id="sc"></span></div><div class="grid" id="sg"></div><button class="more" id="sm">View more</button></section>
+<footer>
+  <div><b style="font-size:18px">SNEAKSTYLE</b><p>As an Amazon Associate we earn from qualifying purchases. Prices shown are guides; the final price is set by Amazon.</p></div>
+  <p>support@sneakstyle.com</p>
+</footer>
+<script>
+var TAG='brunchbymist-20',STEP=10;
+var P=[
+{n:'Supreme Box Logo Hoodie',t:'h',b:'Supreme',p:349.99,c:'#c8102e'},
+{n:'BAPE Shark Hoodie Camo',t:'h',b:'BAPE',p:399.99,c:'#4b5d3a'},
+{n:'Off-White Arrow Hoodie',t:'h',b:'Off-White',p:449.99,c:'#e9e4da'},
+{n:'Stone Island Crewneck Hoodie',t:'h',b:'Stone Island',p:429.99,c:'#1f3a5f'},
+{n:'The North Face x Supreme Hoodie',t:'h',b:'Supreme',p:379.99,c:'#2b2b2b'},
+{n:'Nike Club Fleece Pullover Hoodie',t:'h',b:'Nike',p:64.99,c:'#7a7a7a'},
+{n:'Champion Reverse Weave Hoodie',t:'h',b:'Champion',p:59.99,c:'#d9a441'},
+{n:'Carhartt Midweight Hoodie',t:'h',b:'Carhartt',p:54.99,c:'#8b5a2b'},
+{n:'Essentials Pullover Hoodie',t:'h',b:'Fear of God',p:90,c:'#b8a99a'},
+{n:'Adidas Trefoil Hoodie',t:'h',b:'Adidas',p:65,c:'#111111'},
+{n:'Nike Air Max 270 React',t:'s',b:'Nike',p:189.99,c:'#fa5400'},
+{n:'Jordan 1 Retro High Chicago',t:'s',b:'Jordan',p:249.99,c:'#c8102e'},
+{n:'Yeezy Boost 350 V2 Zebra',t:'s',b:'Yeezy',p:299.99,c:'#8a8a8a'},
+{n:'New Balance 990v5',t:'s',b:'New Balance',p:184.99,c:'#6b7280'},
+{n:'Adidas Ultraboost',t:'s',b:'Adidas',p:189.99,c:'#111111'},
+{n:'Nike Dunk Low',t:'s',b:'Nike',p:119.99,c:'#2f6f4f'},
+{n:'Jordan 4 Retro',t:'s',b:'Jordan',p:214.99,c:'#3a5a8c'},
+{n:'Puma RS-X',t:'s',b:'Puma',p:110,c:'#e4143c'},
+{n:'Converse Chuck 70 High',t:'s',b:'Converse',p:90,c:'#efe7d4'},
+{n:'Vans Old Skool',t:'s',b:'Vans',p:70,c:'#222222'},
+{n:'Men Hiking Boot',t:'s',b:'Outdoor',p:89.99,c:'#8b5a2b',l:'https://amzn.to/3M8SWlZ?tag='+TAG}
+];
+var IMG={ /* PASTE YOUR IMAGE LINKS HERE: 'Product name exactly as listed above':'https://your-site.com/photo.jpg' */
+'Nike Air Max 270 React':'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&h=1000&fit=crop',
+'Supreme Box Logo Hoodie':'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&h=1000&fit=crop',
+'Jordan 1 Retro High Chicago':'https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=800&h=1000&fit=crop',
+'BAPE Shark Hoodie Camo':'https://images.unsplash.com/photo-1525498128493-380d1990a112?w=800&h=1000&fit=crop',
+'Yeezy Boost 350 V2 Zebra':'https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=800&h=1000&fit=crop',
+'Off-White Arrow Hoodie':'https://images.unsplash.com/photo-1513531926349-466f15ec8cc7?w=800&h=1000&fit=crop'
+};
+function fb(el){el.onerror=null;el.src=art(P[+el.dataset.i])}
+var shown={h:STEP,s:STEP},saved=false;
+function art(p){
+  var c=p.c,d='rgba(0,0,0,.25)',s;
+  if(p.t==='h')s='<path d="M70 44 50 54 22 112l22 10 14-28v76h84V94l14 28 22-10-28-58-20-10q-30 30-60 0z" fill="'+c+'"/><path d="M70 44q30-24 60 0-30 40-60 0z" fill="'+d+'"/><path d="M76 138h48l8 24H68z" fill="'+d+'"/>';
+  else s='<path d="M20 132v-34q22-4 40-20l14-20 22 16q24 16 64 24 25 6 25 28v10z" fill="'+c+'"/><path d="M96 74q20 22 50 30" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".85"/><rect x="18" y="138" width="170" height="18" rx="9" fill="#fff"/>';
+  return 'data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 20 200 160" preserveAspectRatio="xMidYMid meet">'+s+'</svg>');
+}
+function esc(x){return String(x).replace(/[&<>"]/g,function(m){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]})}
+var W=[];try{W=JSON.parse(localStorage.getItem('ss_wl'))||[]}catch(e){}
+function saveW(){try{localStorage.setItem('ss_wl',JSON.stringify(W))}catch(e){}document.getElementById('wc').textContent=W.length}
+function link(p){return p.l||'https://www.amazon.com/s?k='+encodeURIComponent(p.b+' '+p.n)+'&tag='+TAG}
+function card(p){
+  var i=P.indexOf(p),on=W.indexOf(i)>-1;
+  return '<article><div class="img"><img src="'+(IMG[p.n]||art(p))+'" data-i="'+i+'" onerror="fb(this)" alt="'+esc(p.n)+'" loading="lazy"><span class="tag">'+esc(p.b)+'</span>'+
+  '<button class="heart'+(on?' on':'')+'" data-i="'+i+'" aria-label="Wishlist">'+(on?'♥':'♡')+'</button></div>'+
+  '<div class="nm">'+esc(p.n)+'</div><div class="pr">$'+p.p.toFixed(2)+'</div>'+
+  '<a class="buy" href="'+link(p)+'" target="_blank" rel="noopener noreferrer nofollow sponsored">Buy on Amazon</a></article>';
+}
+function render(){
+  var q=document.getElementById('q').value.toLowerCase().trim();
+  var f=P.filter(function(p){
+    if(saved&&W.indexOf(P.indexOf(p))<0)return false;
+    return !q||(p.n+' '+p.b+' '+(p.t==='h'?'hoodie':'shoe sneaker')).toLowerCase().indexOf(q)>-1});
+  [['h','hg','hc','hm'],['s','sg','sc','sm']].forEach(function(g){
+    var a=f.filter(function(p){return p.t===g[0]}),v=a.slice(0,shown[g[0]]);
+    document.getElementById(g[1]).innerHTML=v.length?v.map(card).join(''):'<div class="none">'+(saved?'Nothing saved here yet.':'No matches. Try another search.')+'</div>';
+    document.getElementById(g[2]).textContent=a.length+' items';
+    document.getElementById(g[3]).style.display=a.length>v.length?'block':'none';
+  });
+}
+document.addEventListener('click',function(e){
+  var h=e.target.closest('.heart');
+  if(h){var i=+h.dataset.i,k=W.indexOf(i);if(k>-1)W.splice(k,1);else W.push(i);saveW();render()}
+});
+document.getElementById('hm').onclick=function(){shown.h+=STEP;render()};
+document.getElementById('sm').onclick=function(){shown.s+=STEP;render()};
+document.getElementById('sf').addEventListener('submit',function(e){e.preventDefault();render()});
+document.getElementById('q').addEventListener('input',render);
+document.getElementById('wl').addEventListener('click',function(){saved=!saved;this.style.color=saved?'var(--red)':'';render()});
+document.getElementById('th').addEventListener('click',function(){
+  var r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  r.dataset.theme=dark?'light':'dark';
+});
+saveW();render();
+</script>
+</body>
+</html>
